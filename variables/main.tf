@@ -22,13 +22,14 @@ data "aws_ami" "latest_amazon_linux" {
 
 resource "asw_eip" "my_static_ip" {
   instance = aws_instance.my_server.id
-
-  tags = {
+   //tags = var.common_tags
+   tags = merge(var.common_tags, {Name = "${var.common_tags["Enviornment"]}Server IP"})
+  /*tags = {
       Name = "Server IP"
       Owner = "Me"
       Project = "Phoenix"
-      WichRegion = var.region
-  }
+      
+  }*/
 }
 
 resource "aws_instance" "my_server" {
@@ -36,12 +37,13 @@ resource "aws_instance" "my_server" {
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.my_server.id]
   monitoring = var._enable_detailed_monitoring
-
-  tags = {
+   
+   tags = merge(var.common_tags, {Name = "${var.common_tags["Enviornment"]}Web Server Build by Terraform"})
+  /*tags = {
     Name = "Web Server Build by Terraform"
     Owner = "Me"
     Project = "Phoenix"
-  }
+  }*/
 }
 
 resource "aws_security_group" "my_server" {

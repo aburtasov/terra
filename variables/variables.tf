@@ -21,3 +21,16 @@ variable "_enable_detailed_monitoring" {
   type = bool
   default = "true"
 }
+
+variable "common_tags" {
+  description = "Common tags to apply to all resources"
+  type = map
+
+  default = {
+      
+      Owner = "Me"
+      Project = "Phoenix"
+      Env = "Development"
+      
+  }
+}
