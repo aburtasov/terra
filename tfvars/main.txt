@@ -1,0 +1,19 @@
+1.
+terraform plan -var="region=us-east-1"
+terraform apply -var="region=us-east-1"
+----------------------------------------
+
+terraform plan -var="region=us-east-1" -var="instance_type=t2.micro"
+terraform apply -var="region=us-east-1" -var="instance_type=t2.micro"
+----------------------------------------
+
+2.
+export TF_VAR_region=us-west-1
+echo $TF_VAR_region
+export TF_VAR_instance_type=t2.small
+env | grep TF_VAR
+
+---------------------------------------
+3. 
+terraform apply -var-file="terraform.tfvars"
+
