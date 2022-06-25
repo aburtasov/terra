@@ -1,0 +1,20 @@
+.tfstate важный файл, лучше хранить удаленно
+
+на s3 бакетах
+
+некоторые инженеры работают над vpc, subnets,routing ,etc  - сетевой layer 
+другие - создают сервера, кластеры rds. им нужно знать vpc id , subnets id , cidr blocks
+
+все это возможно станет благодаря terraform.tfstate remote 
+
+создаем s3 bucket - > enable versioning  + enable encryption 
+запишем его имя и region
+
+
+terraform init 
+terraform apply
+
+remote state сохранится в бакете 
+
+1-й инженер создал vpc-сеть  // очень важно при работе с remote state делать outputs
+2-й инженер будет создавать security group. ему нужен vpc_id
