@@ -1,0 +1,17 @@
+def create_network(env,cidr_block,public_subnet_cidrs=[],private_subnet_cidrs=[]):
+  aaa
+  bbb
+  ccc
+  ddd
+
+  return vpc_id,public_subnet_ids,private_subnet_ids 
+
+test=create_network("test","10.30.0.0/16",["10.30.1.0/24","10.30.2.0/24"])
+dev=create_network("dev","10.20.0.0/16",["10.20.1.0/24","10.20.2.0/24"],["10.20.11.0/24","10.20.22.0/24"])
+
+Модули в terraform это функции
+
+terraform init
+
+terraform apply
+
