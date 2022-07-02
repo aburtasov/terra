@@ -15,3 +15,13 @@ terraform init
 
 terraform apply
 
+===============================================================================================================
+
+#======================================================================
+# terraform module source ... можно хранить во многих местах
+# source = "git@github.com:repo_name//aws_network"
+#
+
+ terraform init
+ terraform apply
+
