@@ -40,6 +40,4 @@ resource "aws_security_group" "webserver" {
     protocol = "-1"
     to_port = 0
   } 
-
-
 }
