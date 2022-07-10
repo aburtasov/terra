@@ -1,0 +1,8 @@
+mygcp-creds.json  -> account -> iam&admin -> service accounts -> create  -> create key (json)
+
+// export GOOGLE_CLOUD_KEYFILE_JSON="gcp-creds.json"
+
+terraform init
+terraform apply
+terraform destroy
+
