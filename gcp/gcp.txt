@@ -7,3 +7,5 @@ terraform apply
 terraform destroy
 
 terraform up & running
+
+terraform aws modules -> repos github 
