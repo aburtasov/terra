@@ -39,5 +39,8 @@ resource "aws_instance" "node3" {
 // пересоздать node1 ... можно с помощью комментирования ресурса
 // кроме depends_on 
 
-// terraform taint aws_instance.node2
+// terraform taint aws_instance.node2  до версии v0.15.2 
 // terraform plan
+
+// terraform --version
+// terraform apply -replace aws_instance.node2 
