@@ -1,0 +1,6 @@
+.terraform directory ... providers ... modules
+.terraform.lock.hcl --> сохраняет providers,hashes --> push to github ... gitignore
+terraform init -upgrade
+
+
+
